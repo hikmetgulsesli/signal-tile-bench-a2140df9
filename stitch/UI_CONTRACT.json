@@ -1,0 +1,50 @@
+[
+  {
+    "screenId": "fca30848af7544e3a123f79d4b9930ea",
+    "screenTitle": "Status Utility - Signal Tile Bench",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "button",
+        "label": "Retry",
+        "line": 193
+      },
+      {
+        "type": "button",
+        "label": "Status",
+        "line": 198
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 206
+      }
+    ],
+    "navigation": [],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "Retry",
+        "line": 193
+      },
+      {
+        "type": "button",
+        "label": "Status",
+        "line": 198
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 206
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 3,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  }
+]
