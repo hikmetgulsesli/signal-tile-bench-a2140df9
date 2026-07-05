@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Status Utility - Signal Tile Bench</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c3c6d7",
+                    "on-surface-variant": "#434655",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#131b2e",
+                    "on-error-container": "#93000a",
+                    "surface-container-high": "#e2e7ff",
+                    "on-secondary": "#ffffff",
+                    "primary": "#004ac6",
+                    "secondary-fixed": "#d3e4fe",
+                    "on-primary-container": "#eeefff",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "surface-dim": "#d2d9f4",
+                    "on-secondary-container": "#54647a",
+                    "surface-container-low": "#f2f3ff",
+                    "on-surface": "#131b2e",
+                    "inverse-on-surface": "#eef0ff",
+                    "surface": "#faf8ff",
+                    "on-primary": "#ffffff",
+                    "surface-container-highest": "#dae2fd",
+                    "inverse-surface": "#283044",
+                    "background": "#faf8ff",
+                    "primary-fixed": "#dbe1ff",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#0053db",
+                    "on-primary-fixed": "#00174b",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "outline": "#737686",
+                    "on-tertiary-fixed": "#360f00",
+                    "inverse-primary": "#b4c5ff",
+                    "tertiary": "#943700",
+                    "on-error": "#ffffff",
+                    "secondary-container": "#d0e1fb",
+                    "on-secondary-fixed-variant": "#38485d",
+                    "surface-container": "#eaedff",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "surface-variant": "#dae2fd",
+                    "surface-bright": "#faf8ff",
+                    "on-tertiary-container": "#ffede6",
+                    "tertiary-fixed": "#ffdbcd",
+                    "tertiary-container": "#bc4800",
+                    "secondary": "#505f76",
+                    "on-secondary-fixed": "#0b1c30",
+                    "secondary-fixed-dim": "#b7c8e1",
+                    "primary-container": "#2563eb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "sm": "8px",
+                    "lg": "24px",
+                    "margin": "24px",
+                    "xl": "32px",
+                    "gutter": "16px",
+                    "md": "16px",
+                    "xs": "4px",
+                    "unit": "4px"
+            },
+            "fontFamily": {
+                    "headline-md": [
+                            "Inter"
+                    ],
+                    "label-caps": [
+                            "Inter"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "body-sm": [
+                            "Inter"
+                    ],
+                    "headline-lg": [
+                            "Inter"
+                    ],
+                    "mono-data": [
+                            "JetBrains Mono"
+                    ]
+            },
+            "fontSize": {
+                    "headline-md": [
+                            "18px",
+                            {
+                                    "lineHeight": "24px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-caps": [
+                            "11px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-sm": [
+                            "13px",
+                            {
+                                    "lineHeight": "18px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "mono-data": [
+                            "13px",
+                            {
+                                    "lineHeight": "18px",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Custom Toggle Switch Styles */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #004ac6;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #004ac6;
+        }
+        .toggle-checkbox:checked + .toggle-label:after {
+            transform: translateX(100%);
+            border-color: white;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex items-center justify-center p-md antialiased">
+<!-- Main Container -->
+<main class="w-full max-w-[600px] bg-white border border-outline-variant rounded-lg shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] overflow-hidden">
+<!-- Top App Bar equivalent header for utility -->
+<header class="flex justify-between items-center h-12 px-md w-full bg-surface border-b border-outline-variant">
+<h1 class="font-headline-md text-headline-md font-bold text-on-surface">Signal Tile Bench</h1>
+<div class="flex items-center gap-sm">
+<span class="font-mono-data text-mono-data text-on-surface-variant" id="live-timestamp">2023-10-27 14:32:01</span>
+</div>
+</header>
+<!-- Content Area -->
+<div class="p-lg space-y-lg bg-white">
+<!-- Error Banner (Hidden by default, shown for demonstration) -->
+<div class="hidden bg-error-container border border-error/20 p-md rounded flex items-start gap-md" id="error-banner">
+<span class="material-symbols-outlined text-error mt-0.5" data-weight="fill">error</span>
+<div class="flex-1">
+<p class="font-body-sm text-body-sm text-on-error-container font-semibold">Local state synchronization failed.</p>
+<p class="font-body-sm text-body-sm text-on-error-container opacity-80 mt-1">Unable to fetch latest signal data. Check connection.</p>
+</div>
+<button class="font-label-caps text-label-caps text-error border border-error/30 hover:bg-error/10 px-3 py-1 rounded transition-colors duration-150 uppercase" onclick="hideError()">Retry</button>
+</div>
+<!-- Controls Row -->
+<div class="flex items-center justify-between bg-surface-container-low p-md rounded border border-outline-variant/50">
+<div class="flex items-center gap-md">
+<button class="bg-primary hover:bg-on-primary-fixed-variant text-on-primary font-body-md text-body-md font-bold px-4 py-2 rounded transition-colors duration-150 ease-in-out flex items-center gap-xs" onclick="showError()">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+                        Refresh Status
+                    </button>
+</div>
+<div class="flex items-center gap-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Paused</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-8 h-4 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-outline-variant after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary"></div>
+</label>
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold">Ready</span>
+</div>
+</div>
+<!-- Status Tiles Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-sm">
+<!-- Tile 1 -->
+<div class="border border-outline-variant rounded bg-white hover:bg-surface-container-low transition-colors duration-150">
+<div class="bg-surface-container-low px-sm py-2 border-b border-outline-variant flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Process A</span>
+<div class="w-2 h-2 rounded-full bg-[#10b981]"></div> <!-- Success Green -->
+</div>
+<div class="p-sm">
+<div class="font-mono-data text-mono-data text-on-surface">SYS_ACTIVE</div>
+<div class="font-body-sm text-body-sm text-outline mt-1 truncate">Latency: 12ms</div>
+</div>
+</div>
+<!-- Tile 2 -->
+<div class="border border-outline-variant rounded bg-white hover:bg-surface-container-low transition-colors duration-150">
+<div class="bg-surface-container-low px-sm py-2 border-b border-outline-variant flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">System B</span>
+<div class="w-2 h-2 rounded-full bg-[#f59e0b]"></div> <!-- Warning Amber -->
+</div>
+<div class="p-sm">
+<div class="font-mono-data text-mono-data text-on-surface">DB_SYNC_WARN</div>
+<div class="font-body-sm text-body-sm text-outline mt-1 truncate">Queue: 145 items</div>
+</div>
+</div>
+<!-- Tile 3 -->
+<div class="border border-outline-variant rounded bg-white hover:bg-surface-container-low transition-colors duration-150">
+<div class="bg-surface-container-low px-sm py-2 border-b border-outline-variant flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Feed C</span>
+<div class="w-2 h-2 rounded-full bg-error"></div> <!-- Error Red -->
+</div>
+<div class="p-sm">
+<div class="font-mono-data text-mono-data text-on-surface">CONN_DROPPED</div>
+<div class="font-body-sm text-body-sm text-outline mt-1 truncate">Last seen: 4m ago</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<script>
+        // Simple script to update timestamp and toggle error banner for demonstration
+        function updateTimestamp() {
+            const now = new Date();
+            const timestamp = now.toISOString().replace('T', ' ').substring(0, 19);
+            document.getElementById('live-timestamp').textContent = timestamp;
+        }
+
+        setInterval(updateTimestamp, 1000);
+        updateTimestamp();
+
+        function showError() {
+            const banner = document.getElementById('error-banner');
+            banner.classList.remove('hidden');
+            setTimeout(() => {
+                banner.classList.add('hidden');
+            }, 5000); // Auto hide after 5s for demo
+        }
+
+        function hideError() {
+            document.getElementById('error-banner').classList.add('hidden');
+        }
+    </script>
+</body></html>

@@ -1,0 +1,178 @@
+{
+  "generatedAt": "2026-07-05T12:22:46.335Z",
+  "screenCount": 1,
+  "screens": {
+    "fca30848af7544e3a123f79d4b9930ea": {
+      "screenId": "fca30848af7544e3a123f79d4b9930ea",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "main",
+          "layout": "block",
+          "classes": [
+            "w-full",
+            "max-w-[600px]",
+            "bg-white",
+            "border",
+            "border-outline-variant",
+            "rounded-lg",
+            "shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)]",
+            "overflow-hidden"
+          ],
+          "childCount": 27
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Retry",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps",
+            "text-error",
+            "border",
+            "border-error/30",
+            "hover:bg-error/10",
+            "px-3",
+            "py-1",
+            "rounded",
+            "transition-colors",
+            "duration-150",
+            "uppercase"
+          ],
+          "icon": null,
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "Status",
+          "classes": [
+            "bg-primary",
+            "hover:bg-on-primary-fixed-variant",
+            "text-on-primary",
+            "font-body-md",
+            "text-body-md",
+            "font-bold",
+            "px-4",
+            "py-2",
+            "rounded",
+            "transition-colors",
+            "duration-150",
+            "ease-in-out",
+            "flex",
+            "items-center",
+            "gap-xs"
+          ],
+          "icon": "refresh",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "checkbox",
+          "label": "checkbox",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "sr-only",
+            "peer"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [],
+      "cards": [],
+      "icons": [
+        "error",
+        "refresh"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "outline-variant": "#c3c6d7",
+        "on-surface-variant": "#434655",
+        "primary-fixed-dim": "#b4c5ff",
+        "on-tertiary": "#ffffff",
+        "on-background": "#131b2e",
+        "on-error-container": "#93000a",
+        "surface-container-high": "#e2e7ff",
+        "on-secondary": "#ffffff",
+        "primary": "#004ac6",
+        "secondary-fixed": "#d3e4fe",
+        "on-primary-container": "#eeefff",
+        "tertiary-fixed-dim": "#ffb596",
+        "surface-dim": "#d2d9f4",
+        "on-secondary-container": "#54647a",
+        "surface-container-low": "#f2f3ff",
+        "on-surface": "#131b2e",
+        "inverse-on-surface": "#eef0ff",
+        "surface": "#faf8ff",
+        "on-primary": "#ffffff",
+        "surface-container-highest": "#dae2fd",
+        "inverse-surface": "#283044",
+        "background": "#faf8ff",
+        "primary-fixed": "#dbe1ff",
+        "error": "#ba1a1a",
+        "surface-tint": "#0053db",
+        "on-primary-fixed": "#00174b",
+        "surface-container-lowest": "#ffffff",
+        "on-primary-fixed-variant": "#003ea8",
+        "outline": "#737686",
+        "on-tertiary-fixed": "#360f00",
+        "inverse-primary": "#b4c5ff",
+        "tertiary": "#943700",
+        "on-error": "#ffffff",
+        "secondary-container": "#d0e1fb",
+        "on-secondary-fixed-variant": "#38485d",
+        "surface-container": "#eaedff",
+        "error-container": "#ffdad6",
+        "on-tertiary-fixed-variant": "#7d2d00",
+        "surface-variant": "#dae2fd",
+        "surface-bright": "#faf8ff",
+        "on-tertiary-container": "#ffede6",
+        "tertiary-fixed": "#ffdbcd",
+        "tertiary-container": "#bc4800",
+        "secondary": "#505f76",
+        "on-secondary-fixed": "#0b1c30",
+        "secondary-fixed-dim": "#b7c8e1",
+        "primary-container": "#2563eb"
+      },
+      "fonts": [
+        "Inter",
+        "JetBrains Mono",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 1
+      },
+      "behaviorContract": [
+        {
+          "kind": "button",
+          "label": "Retry",
+          "icon": null,
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "Status",
+          "icon": "refresh",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "checkbox",
+          "type": "checkbox",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [],
+      "title": "Status Utility - Signal Tile Bench"
+    }
+  }
+}

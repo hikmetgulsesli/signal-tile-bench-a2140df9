@@ -1,0 +1,11 @@
+[
+  {
+    "screenId": "fca30848af7544e3a123f79d4b9930ea",
+    "name": "Status Utility - Signal Tile Bench",
+    "type": "app-screen",
+    "description": "Status Utility - Signal Tile Bench screen",
+    "surfaceIds": [
+      "SURF_STATUS_UTILITY"
+    ]
+  }
+]
