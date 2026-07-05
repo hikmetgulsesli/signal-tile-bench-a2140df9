@@ -1,0 +1,25 @@
+[
+  {
+    "screenId": "fca30848af7544e3a123f79d4b9930ea",
+    "title": "Status Utility - Signal Tile Bench",
+    "componentName": "StatusUtilitySignalTileBench",
+    "file": "src/screens/StatusUtilitySignalTileBench.tsx",
+    "buttons": 2,
+    "inputs": 1,
+    "links": 0,
+    "actions": [
+      {
+        "id": "retry-1",
+        "kind": "button",
+        "label": "Retry",
+        "index": 0
+      },
+      {
+        "id": "refresh-status-2",
+        "kind": "button",
+        "label": "Refresh Status",
+        "index": 1
+      }
+    ]
+  }
+]
